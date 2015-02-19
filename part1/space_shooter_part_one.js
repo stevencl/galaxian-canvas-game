@@ -105,26 +105,7 @@ function Game() {
 	 * running on older browsers.
 	 */
 	this.init = function() {
-		// Get the canvas element
-		this.bgCanvas = document.getElementById('background');
-		
-		// Test to see if canvas is supported
-		if (this.bgCanvas.getContext) {
-			this.bgContext = this.bgCanvas.getContext('2d');
-		
-			// Initialize objects to contain their context and canvas
-			// information
-			Background.prototype.context = this.bgContext;
-			Background.prototype.canvasWidth = this.bgCanvas.width;
-			Background.prototype.canvasHeight = this.bgCanvas.height;
-			
-			// Initialize the background object
-			this.background = new Background();
-			this.background.init(0,0); // Set draw point to 0,0
-			return true;
-		} else {
-			return false;
-		}
+
 	};
 	
 	// Start the animation loop
